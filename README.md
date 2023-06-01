@@ -1,4 +1,4 @@
-# 学科サーバで、OpenCALM-3BをLoRAでInstruction tuningして対話ができるようにしてみる
+# 学科サーバで、OpenCALM-3BをLoRAでFine tuningして対話ができるようにしてみる
 ## 元ネタ
 - [OpenCALM-7BをLoRAでFine tuningして対話ができるようにする](https://note.com/masuidrive/n/n0e2a11fc5bfa)
 - 参考
@@ -124,4 +124,4 @@ singularity exec --nv huggingface.sif python3 test_model.py  595.56s user 151.06
     - 特定情報源に基づいて答えさせるには、情報源を抽出してコンテキストとして与えるぐらいでなんとかなる部分もありそう。今回の例では不適切な応答をしているけど、そもそも1 epochしかしていないし、コンテキストが不十分という可能性もある。
 - その他
     - 今回は 1 epoch しか動かしていないので、10 epochぐらい回しっぱなしにしてみるか。[LLaMA-Adapter](https://github.com/ZrrSkywalker/LLaMA-Adapter)だと5 epochらしい。
-    - [FlexGen](https://github.com/FMInference/FlexGen)みたいにリソース調整できるなら7bでの学習も十分視野には理想な気がするな。
+    - [FlexGen](https://github.com/FMInference/FlexGen)みたいにリソース調整できるなら7bでの学習も十分視野に入りそうな気がするな。
