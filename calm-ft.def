@@ -1,0 +1,7 @@
+BootStrap: localimage
+From: transformers-pytorch-gpu_latest.sif
+# singularity pull docker://huggingface/transformers-pytorch-gpu
+
+%post
+    pip install --upgrade pip
+    pip install --trusted-host pip-cache.ie.u-ryukyu.ac.jp --index-url http://pip-cache.ie.u-ryukyu.ac.jp:3141/root/pypi -q -U peft accelerate
